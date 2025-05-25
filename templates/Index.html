@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forrajería Mimitos - Tu lugar de confianza para productos de mascotas en Luján, Buenos Aires. Envíos sin cargo en Luján y Open Door.">
+    <meta name="keywords" content="forrajería, mascotas, balanceados, Luján, Open Door, Barrio Mirador, productos para perros, productos para gatos">
+    <meta name="author" content="Forrajería Mimitos">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="MIMITOS - Forrajería y Productos para Mascotas">
+    <meta property="og:description" content="Tu lugar de confianza para productos de mascotas en Luján, Buenos Aires">
+    <meta property="og:image" content="{{ url_for('static', filename='img/logo.jpeg', _external=True) }}">
+    <meta property="og:url" content="{{ request.url }}">
+    <title>MIMITOS - Forrajería y Productos para Mascotas</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="{{ url_for('static', filename='styles.css') }}" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.jpeg') }}" type="image/jpeg">
+</head>
+<body>
+    <header>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <div class="logo" aria-label="Logo Forrajería Mimitos">Forrajería Mimitos</div>
+            <ul class="nav-links">
+                <li><a href="#productos" aria-label="Ir a sección Productos">Productos</a></li>
+                <li><a href="#nosotros" aria-label="Ir a sección Nosotros">Nosotros</a></li>
+                <li><a href="#sucursales" aria-label="Ir a sección Sucursales">Sucursales</a></li>
+                <li><a href="#contacto" aria-label="Ir a sección Contacto">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+
+    <style>
+        :root {
+            --color-primario: #FF6B35; /* Naranja principal */
+            --color-secundario: #FF8C61; /* Naranja más claro */
+            --color-oscuro: #2D3142; /* Color oscuro para texto */
+            --color-claro: #FFFFFF; /* Blanco */
+            --color-fondo: #FFF5F2; /* Fondo suave naranja claro */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: var(--color-fondo);
+            color: var(--color-oscuro);
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--color-primario);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            margin: 0;
+            padding: 0;
+        }
+
+        header.hidden {
+            transform: translateY(-100%);
+        }
+
+        .main-nav {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .main-nav::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.3), 
+                transparent
+            );
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: var(--color-claro);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: var(--color-claro);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 80%;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            color: var(--color-claro);
+            font-weight: bold;
+            font-size: 1.8rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 0.5px;
+        }
+
+        .hero {
+            background-color: var(--color-primario);
+            color: var(--color-claro);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .btn-cta {
+            background-color: var(--color-claro);
+            color: var(--color-primario);
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--color-secundario);
+            color: var(--color-claro);
+        }
+
+        .productos {
+            background-color: var(--color-fondo);
+            padding: 2rem;
+        }
+
+        .productos-titulo {
+            color: var(--color-primario);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .filtro-categorias {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem auto;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
+
+        .filtro-btn {
+            background-color: var(--color-claro);
+            color: var(--color-primario);
+            border: 2px solid var(--color-primario);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            min-width: 120px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(255, 107, 53, 0.1);
+        }
+
+        .filtro-btn:hover {
+            background-color: var(--color-primario);
+            color: var(--color-claro);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(255, 107, 53, 0.2);
+        }
+
+        .filtro-btn.active {
+            background-color: var(--color-primario);
+            color: var(--color-claro);
+            box-shadow: 0 4px 10px rgba(255, 107, 53, 0.2);
+        }
+
+        .producto {
+            background-color: var(--color-claro);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .producto:hover {
+            transform: translateY(-5px);
+        }
+
+        .boton-wsp {
+            background-color: #25D366;  /* Color verde de WhatsApp */
+            color: var(--color-claro);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .boton-wsp:hover {
+            background-color: #128C7E;  /* Color verde más oscuro de WhatsApp */
+        }
+
+        .nosotros, .sucursales {
+            background-color: var(--color-claro);
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .contacto {
+            background-color: var(--color-fondo);
+            padding: 4rem 2rem;
+            position: relative;
+            margin-bottom: 0;
+        }
+
+        .contacto::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 107, 53, 0.05), rgba(255, 140, 97, 0.05));
+            pointer-events: none;
+        }
+
+        .contacto-contenedor {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contacto-info {
+            padding: 2rem;
+        }
+
+        .contacto-info h2 {
+            color: var(--color-primario);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contacto-info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: var(--color-oscuro);
+        }
+
+        .contacto-redes {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .contacto-redes h3 {
+            color: var(--color-primario);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contacto-opciones {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .envio-banner {
+            background-color: var(--color-primario);
+            color: var(--color-claro);
+            padding: 1.5rem;
+            text-align: center;
+            margin: 2rem 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+        }
+
+        .envio-banner i {
+            font-size: 2rem;
+        }
+
+        .envio-banner span {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* Estilos para el formulario de contacto */
+        .contacto-formulario {
+            background-color: var(--color-claro);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contacto-formulario::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+        }
+
+        .contacto-formulario h3 {
+            color: var(--color-primario);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .contacto-formulario p {
+            color: var(--color-oscuro);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-oscuro);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: #f8f9fa;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-primario);
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+            background-color: var(--color-claro);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #999;
+        }
+
+        .btn-enviar {
+            background-color: var(--color-primario);
+            color: var(--color-claro);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1.1rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .btn-enviar:hover {
+            background-color: var(--color-secundario);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+        }
+
+        .btn-enviar:active {
+            transform: translateY(0);
+        }
+
+        .mensaje-formulario {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .mensaje-formulario.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .mensaje-formulario.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Estilos para la sección de sucursales */
+        .sucursales {
+            background-color: var(--color-claro);
+            padding: 4rem 2rem;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sucursal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .sucursal {
+            background-color: var(--color-claro);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .sucursal h3 {
+            color: var(--color-primario);
+            margin-bottom: 1rem;
+        }
+
+        .sucursal address {
+            font-style: normal;
+        }
+
+        .sucursal p {
+            margin: 0.5rem 0;
+        }
+
+        /* Estilos para el buscador y filtros */
+        .buscador-productos {
+            margin: 2rem auto;
+            max-width: 600px;
+            padding: 0 1rem;
+        }
+
+        .buscador-contenedor {
+            display: flex;
+            background-color: var(--color-claro);
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .buscador-contenedor:focus-within {
+            border-color: var(--color-primario);
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+        }
+
+        #buscar-producto {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            background: transparent;
+            font-size: 1rem;
+            color: var(--color-oscuro);
+            outline: none;
+        }
+
+        #buscar-producto::placeholder {
+            color: #999;
+        }
+
+        .boton-buscar {
+            background-color: var(--color-primario);
+            color: var(--color-claro);
+            border: none;
+            padding: 0 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .boton-buscar:hover {
+            background-color: var(--color-secundario);
+        }
+
+        .resultados-busqueda {
+            text-align: center;
+            margin: 1.5rem auto;
+            max-width: 600px;
+            padding: 1rem;
+            background-color: var(--color-claro);
+            border-radius: 50px;
+            box-shadow: 0 2px 5px rgba(255, 107, 53, 0.1);
+        }
+
+        .limpiar-busqueda {
+            color: var(--color-primario);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--color-primario);
+            border-radius: 50px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .limpiar-busqueda:hover {
+            background-color: var(--color-primario);
+            color: var(--color-claro);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(255, 107, 53, 0.2);
+        }
+
+        /* Estilos para la sección hero */
+        .hero {
+            background-color: var(--color-primario);
+            color: var(--color-claro);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero-img {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h1 {
+            margin-bottom: 1rem;
+            font-size: 2.8rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Estilos para la navegación móvil */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--color-primario);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: right 0.3s ease;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .menu-toggle {
+                display: block;
+                background: none;
+                border: none;
+                color: var(--color-claro);
+                font-size: 1.5rem;
+                cursor: pointer;
+                z-index: 1000;
+            }
+
+            .contacto-contenedor {
+                grid-template-columns: 1fr;
+            }
+
+            .contacto-info {
+                padding: 1rem;
+            }
+
+            .contacto-formulario {
+                margin-top: 2rem;
+            }
+        }
+
+        /* Estilos para la paginación */
+        .paginacion {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .paginacion-btn {
+            background-color: var(--color-primario);
+            color: var(--color-claro);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .paginacion-btn:hover {
+            background-color: var(--color-secundario);
+        }
+
+        .paginacion-numeros {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .paginacion-numero {
+            background-color: var(--color-claro);
+            color: var(--color-oscuro);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            border: 1px solid #dee2e6;
+            transition: all 0.3s;
+        }
+
+        .paginacion-numero:hover {
+            background-color: var(--color-fondo);
+        }
+
+        .paginacion-numero.activo {
+            background-color: var(--color-primario);
+            color: var(--color-claro);
+            border-color: var(--color-primario);
+        }
+
+        .admin-access-link {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(255, 107, 53, 0.1);
+            color: #FF6B35;
+            padding: 0.5rem;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            opacity: 0.7;
+        }
+        .admin-access-link:hover {
+            background: rgba(255, 107, 53, 0.2);
+            opacity: 1;
+        }
+
+        /* Estilos para la transición entre secciones */
+        .section-transition {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease-out;
+            z-index: 1001;
+            pointer-events: none;
+            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+        }
+
+        .section-transition.active {
+            transform: scaleX(1);
+        }
+
+        /* Efecto de transición para las secciones */
+        section {
+            position: relative;
+            transition: opacity 0.5s ease;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                rgba(255, 107, 53, 0.05), 
+                rgba(255, 140, 97, 0.05)
+            );
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        section:hover::before {
+            opacity: 1;
+        }
+
+        /* Ajuste del espaciado para compensar el header fijo */
+        main {
+            padding-top: 80px;
+        }
+    </style>
+
+    <div class="section-transition"></div>
+
+    <main>
+        <section class="hero" aria-label="Bienvenida">
+            <img src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="Logo Forrajería Mimitos" class="hero-img" width="200" height="200">
+            <h1>Bienvenido a Mimitos</h1>
+            <p>Tu lugar de confianza de productos para tu mascota.</p>
+        </section>
+
+        <section id="productos" class="productos" aria-labelledby="productos-titulo">
+            <h2 id="productos-titulo" class="productos-titulo">Catálogo de Productos</h2>
+            
+            <div class="filtro-categorias">
+                <button class="filtro-btn active" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="perros">Perros</button>
+                <button class="filtro-btn" data-categoria="gatos">Gatos</button>
+            </div>
+
+            <!-- Buscador de productos -->
+            <div class="buscador-productos">
+                <div class="buscador-contenedor">
+                    <input type="text" 
+                           id="buscar-producto" 
+                           name="q" 
+                           placeholder="Buscar productos..." 
+                           aria-label="Buscar productos"
+                           value="{{ busqueda if busqueda else '' }}">
+                    <button type="button" class="boton-buscar" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="resultados-busqueda" class="resultados-busqueda" style="display: none;">
+                <p>Resultados de búsqueda para: "<span id="termino-busqueda"></span>"</p>
+                <a href="#" class="limpiar-busqueda" onclick="limpiarBusqueda()">
+                    <i class="fas fa-times"></i> Limpiar búsqueda
+                </a>
+            </div>
+
+            <div id="contenedor-productos">
+                {% include '_productos.html' %}
+            </div>
+
+            <!-- Paginación -->
+            <div id="contenedor-paginacion">
+                {% include '_paginacion.html' %}
+            </div>
+        </section>
+
+        <section id="nosotros" class="nosotros" aria-labelledby="nosotros-titulo">
+            <h2 id="nosotros-titulo">¿Quiénes somos?</h2>
+            <p>
+                Somos dos jóvenes emprendedores apasionados por lo que hacemos.  
+                Amamos a los animales y nos dedicamos con compromiso y profesionalismo a brindar productos de calidad para su bienestar.  
+                En Mimitos, creemos que cada mascota y cada animal merece lo mejor, y trabajamos día a día para ofrecer un servicio cálido, cercano y confiable.
+            </p>
+        </section>
+
+        <section id="contacto" class="contacto" aria-labelledby="contacto-titulo">
+            <div class="contacto-contenedor">
+                <div class="contacto-info">
+                    <h2 id="contacto-titulo">Contacto</h2>
+                    <p>
+                        ¿Tenés dudas o querés hacer un pedido? Estamos para ayudarte. 
+                        Contactanos por cualquiera de nuestros canales o completá el formulario 
+                        y te responderemos a la brevedad.
+                    </p>
+                    
+                    <div class="contacto-redes">
+                        <h3>Contactanos por redes sociales</h3>
+                        <div class="contacto-opciones">
+                            <a class="boton-wsp" href="https://wa.me/5492323534156" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensaje por WhatsApp">
+                                <i class="fab fa-whatsapp"></i> Enviar mensaje por WhatsApp
+                            </a>
+                            <a class="boton-redes instagram" href="https://instagram.com/mimitos.balanceados" target="_blank" rel="noopener noreferrer" aria-label="Seguir en Instagram">
+                                <i class="fab fa-instagram"></i> Seguinos en Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="envio-banner">
+                        <i class="fas fa-truck"></i>
+                        <span>¡ENVÍOS SIN CARGO EN Luján y Open Door!</span>
+                    </div>
+                </div>
+
+                <div class="contacto-formulario">
+                    <h3>Envíanos un mensaje</h3>
+                    <p>Completá el formulario y te responderemos a la brevedad.</p>
+                    
+                    <form id="contacto-form" class="contacto-form" onsubmit="return enviarFormulario(event)">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-enviar">
+                            <i class="fas fa-paper-plane"></i> Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="mensaje-formulario" class="mensaje-formulario" style="display: none;"></div>
+        </section>
+
+        <section id="sucursales" class="sucursales" aria-labelledby="sucursales-titulo">
+            <h2 id="sucursales-titulo">Nuestras Sucursales</h2>
+            <div class="sucursal-grid">
+                <article class="sucursal">
+                    <h3>Sucursal Lujan Centro</h3>
+                    <address>
+                        <p>📍 Lavalle 641, Luján, Buenos Aires</p>
+                        <p>🕐 Lunes a Sábado de 10 a 13 hs y de 16 a 20 hs</p>
+                    </address>
+                </article>
+                <article class="sucursal">
+                    <h3>Sucursal Open Door</h3>
+                    <address>
+                        <p>📍 Avenida Cabre 2041, Open Door, Buenos Aires</p>
+                        <p>🕐 Lunes a Viernes de 9 a 17 hs</p>
+                    </address>
+                </article>
+                <article class="sucursal">
+                    <h3>Sucursal Barrio Mirador</h3>
+                    <address>
+                        <p>📍 Independencia 1939, Lujan, Buenos Aires</p>
+                        <p>🕐 Lunes a Viernes de 9 a 17 hs</p>
+                    </address>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Forrajería Mimitos - Todos los derechos reservados</p>
+        <a href="{{ url_for('admin_login') }}" class="admin-access-link" title="Acceso administración">
+            <i class="fas fa-user-shield"></i>
+        </a>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            navLinks.classList.toggle('active');
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Filtrado de productos
+        document.addEventListener('DOMContentLoaded', function() {
+            const filtroBtns = document.querySelectorAll('.filtro-btn');
+            const productos = document.querySelectorAll('.producto');
+
+            filtroBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remover clase active de todos los botones
+                    filtroBtns.forEach(b => b.classList.remove('active'));
+                    // Agregar clase active al botón clickeado
+                    btn.classList.add('active');
+
+                    const categoria = btn.getAttribute('data-categoria');
+
+                    productos.forEach(producto => {
+                        if (categoria === 'todos' || producto.getAttribute('data-categoria') === categoria) {
+                            producto.style.display = 'block';
+                            setTimeout(() => producto.style.opacity = '1', 10);
+                        } else {
+                            producto.style.opacity = '0';
+                            setTimeout(() => producto.style.display = 'none', 300);
+                        }
+                    });
+                });
+            });
+        });
+
+        // Control de la barra de navegación al hacer scroll
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        const scrollThreshold = 50;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
+                // Scroll hacia abajo
+                header.classList.add('hidden');
+            } else {
+                // Scroll hacia arriba
+                header.classList.remove('hidden');
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+
+        // Ajustar el scroll suave para compensar el header fijo
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80; // Mismo valor que el padding-top del main
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        async function enviarFormulario(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('contacto-form');
+            const mensajeDiv = document.getElementById('mensaje-formulario');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            // Deshabilitar el botón durante el envío
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            
+            try {
+                const formData = new FormData(form);
+                const response = await fetch('/contacto', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                mensajeDiv.textContent = data.message;
+                mensajeDiv.className = `mensaje-formulario ${data.success ? 'success' : 'error'}`;
+                mensajeDiv.style.display = 'block';
+                
+                if (data.success) {
+                    form.reset();
+                }
+            } catch (error) {
+                mensajeDiv.textContent = 'Error al enviar el mensaje. Por favor, intentá nuevamente.';
+                mensajeDiv.className = 'mensaje-formulario error';
+                mensajeDiv.style.display = 'block';
+            } finally {
+                // Restaurar el botón
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar mensaje';
+            }
+            
+            return false;
+        }
+
+        // Función para actualizar los productos
+        async function actualizarProductos(termino = '', pagina = 1) {
+            try {
+                const url = termino 
+                    ? `/buscar_ajax?q=${encodeURIComponent(termino)}&page=${pagina}`
+                    : `/productos_ajax?page=${pagina}`;
+                
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.error) {
+                    console.error('Error:', data.error);
+                    return;
+                }
+
+                // Actualizar el contenedor de productos
+                document.getElementById('contenedor-productos').innerHTML = data.html;
+                
+                // Actualizar la paginación
+                document.getElementById('contenedor-paginacion').innerHTML = data.paginacion;
+                
+                // Actualizar el indicador de búsqueda
+                const resultadosBusqueda = document.getElementById('resultados-busqueda');
+                const terminoBusqueda = document.getElementById('termino-busqueda');
+                
+                if (termino) {
+                    resultadosBusqueda.style.display = 'flex';
+                    terminoBusqueda.textContent = termino;
+                } else {
+                    resultadosBusqueda.style.display = 'none';
+                }
+
+                // Actualizar la URL sin recargar la página
+                const newUrl = termino 
+                    ? `?q=${encodeURIComponent(termino)}&page=${pagina}`
+                    : `?page=${pagina}`;
+                window.history.pushState({}, '', newUrl);
+            } catch (error) {
+                console.error('Error al actualizar productos:', error);
+            }
+        }
+
+        // Configurar el buscador
+        document.addEventListener('DOMContentLoaded', function() {
+            const buscarInput = document.getElementById('buscar-producto');
+            let timeoutId;
+
+            buscarInput.addEventListener('input', function() {
+                clearTimeout(timeoutId);
+                const termino = this.value.trim();
+                
+                timeoutId = setTimeout(() => {
+                    actualizarProductos(termino);
+                }, 500);
+            });
+
+            // Si hay un término de búsqueda en la URL, mostrarlo
+            const urlParams = new URLSearchParams(window.location.search);
+            const busqueda = urlParams.get('q');
+            const pagina = urlParams.get('page') || 1;
+            
+            if (busqueda) {
+                buscarInput.value = busqueda;
+                actualizarProductos(busqueda, pagina);
+            } else if (pagina > 1) {
+                actualizarProductos('', pagina);
+            }
+        });
+
+        // Agregar el código para la línea de transición
+        document.addEventListener('DOMContentLoaded', function() {
+            const transitionLine = document.querySelector('.section-transition');
+            const sections = document.querySelectorAll('section');
+            let currentSection = '';
+
+            function showTransition() {
+                transitionLine.style.transform = 'scaleX(0)';
+                // Forzar un reflow
+                void transitionLine.offsetWidth;
+                transitionLine.style.transform = 'scaleX(1)';
+            }
+
+            // Observar cambios en la sección visible
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.id;
+                        if (sectionId !== currentSection) {
+                            currentSection = sectionId;
+                            showTransition();
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.3
+            });
+
+            // Observar todas las secciones
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // También mostrar la transición al hacer clic en los enlaces de navegación
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        const headerOffset = 80;
+                        const elementPosition = targetSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        showTransition();
+                    }
+                });
+            });
+
+            // Mostrar la transición al cargar la página
+            showTransition();
+        });
+    </script>
+</body>
+</html>

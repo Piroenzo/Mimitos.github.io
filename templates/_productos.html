@@ -1,0 +1,12 @@
+<div class="producto-grid">
+    {% for producto in productos %}
+    <div class="producto" data-categoria="{{ producto.categoria }}">
+        <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}">
+        <h3>{{ producto.nombre }}</h3>
+        <p class="precio">${{ producto.precio }}</p>
+        <a href="{{ producto.link }}" class="boton-wsp" target="_blank">
+            <i class="fab fa-whatsapp"></i> Consultar
+        </a>
+    </div>
+    {% endfor %}
+</div> 
