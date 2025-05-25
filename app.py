@@ -205,338 +205,338 @@ productos = [
     {
         "id": 17,
         "nombre": "Maxi Adulto 15KG",
-        "imagen": "static/img/Maxi_adulto_x15k.jpeg",
+        "imagen": "Maxi_adulto_x15k.jpeg",
         "precio": 28000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Maxi%20Adulto%2015KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 18,
         "nombre": "Sabrositos Gato Pescado 11KG",
-        "imagen": "static/img/Sabrositos_gato_pescado_x11k.jpg",
+        "imagen": "Sabrositos_gato_pescado_x11k.jpeg",
         "precio": 32000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Sabrositos%20Gato%20Pescado%2011KG"
+        "descripcion": "Alimento balanceado para gatos"
     },
     {
         "id": 19,
         "nombre": "Sabrositos Cachorro 8KG",
-        "imagen": "static/img/Sabrositos_cachorro_x8k.jpg",
+        "imagen": "Sabrositos_cachorro_x8k.jpeg",
         "precio": 28000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Sabrositos%20Cachorro%208KG"
+        "descripcion": "Alimento balanceado para cachorros"
     },
     {
         "id": 20,
         "nombre": "Sabrositos Cachorro 18KG",
-        "imagen": "static/img/Sabrositos_cachorro_x18k.jpg",
+        "imagen": "Sabrositos_cachorro_x18k.jpeg",
         "precio": 45000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Sabrositos%20Cachorro%2018KG"
+        "descripcion": "Alimento balanceado para cachorros"
     },
     {
         "id": 21,
         "nombre": "Sabrositos Gato 20KG",
-        "imagen": "static/img/Sabrositos_gato_x20k.jpg",
+        "imagen": "Sabrositos_gato_x20k.jpeg",
         "precio": 55000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Sabrositos%20Gato%2020KG"
+        "descripcion": "Alimento balanceado para gatos"
     },
     {
         "id": 22,
         "nombre": "Sabrositos Gato 10KG",
-        "imagen": "static/img/Sabrositos_gato_x10k.jpg",
+        "imagen": "Sabrositos_gato_x10k.jpeg",
         "precio": 30000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Sabrositos%20Gato%2010KG"
+        "descripcion": "Alimento balanceado para gatos"
     },
     {
         "id": 23,
         "nombre": "Sabrositos Adulto 15KG",
-        "imagen": "static/img/Sabrosito_adulto_x15k.jpg",
+        "imagen": "Sabrositos_adulto_x15k.jpeg",
         "precio": 35000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Sabrositos%20Adulto%2015KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 24,
         "nombre": "Sabrositos Adulto 22KG",
-        "imagen": "static/img/Sabrositos_adulto_x22k.jpg",
+        "imagen": "Sabrositos_adulto_x22k.jpeg",
         "precio": 48000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Sabrositos%20Adulto%2022KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 25,
         "nombre": "Biomax Cachorro 15KG",
-        "imagen": "static/img/Biomax_Cach_x15kg.jpg",
+        "imagen": "Biomax_Cach_x15kg.jpeg",
         "precio": 42000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Biomax%20Cachorro%2015KG"
+        "descripcion": "Alimento balanceado para cachorros"
     },
     {
         "id": 26,
         "nombre": "Biomax Adulto RP 15KG",
-        "imagen": "static/img/Biomax_Adulto_Rp_x15kg.jpg",
+        "imagen": "Biomax_Adulto_Rp_x15kg.jpeg",
         "precio": 38000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Biomax%20Adulto%20RP%2015KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 27,
         "nombre": "Biomax Adulto 20KG",
-        "imagen": "static/img/Biomax_Adulto_x20kg.jpg",
+        "imagen": "Biomax_Adulto_x20kg.jpeg",
         "precio": 45000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Biomax%20Adulto%2020KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 28,
         "nombre": "Bred Dog Adulto 20KG",
-        "imagen": "static/img/Bred_Dog_Adulto_x20kg.jpg",
+        "imagen": "Bred_Dog_Adulto_x20kg.jpeg",
         "precio": 42000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Bred%20Dog%20Adulto%2020KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 29,
         "nombre": "Old Prince Cordero Adulto/Cachorro 15KG",
-        "imagen": "static/img/Old_Prince_Cordero_Adulto_Cach_x15kg.jpg",
+        "imagen": "Old_Prince_Cordero_Adulto_Cach_x15kg.jpeg",
         "precio": 55000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Old%20Prince%20Cordero%20Adulto/Cachorro%2015KG"
+        "descripcion": "Alimento balanceado para perros adultos y cachorros"
     },
     {
         "id": 30,
         "nombre": "Old Prince Cordero Adulto RP 15KG",
-        "imagen": "static/img/Old_Prince_Cordero_Adulto_Rp_x15kg.jpg",
+        "imagen": "Old_Prince_Cordero_Adulto_Rp_x15kg.jpeg",
         "precio": 52000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Old%20Prince%20Cordero%20Adulto%20RP%2015KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 31,
         "nombre": "Old Prince Cordero Adulto 15KG",
-        "imagen": "static/img/Old_Prince_Cordero_Adulto_x15kg.jpg",
+        "imagen": "Old_Prince_Cordero_Adulto_x15kg.jpeg",
         "precio": 55000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Old%20Prince%20Cordero%20Adulto%2015KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 32,
         "nombre": "Old Prince Tradicional 20KG",
-        "imagen": "static/img/Old_Prince_Tradicional_x20kg.jpg",
+        "imagen": "Old_Prince_Tradicional_x20kg.jpeg",
         "precio": 48000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Old%20Prince%20Tradicional%2020KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 33,
         "nombre": "Mantenaince 22KG",
-        "imagen": "static/img/Mantenaince_x22kg.jpg",
+        "imagen": "Mantenaince_x22kg.jpeg",
         "precio": 42000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Mantenaince%2022KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 34,
         "nombre": "Kitten 7.5KG",
-        "imagen": "static/img/Kitten_x7,5k.jpg",
+        "imagen": "Kitten_x7,5k.jpeg",
         "precio": 28000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Kitten%207.5KG"
+        "descripcion": "Alimento balanceado para gatitos"
     },
     {
         "id": 35,
         "nombre": "Urinary Care 7.5KG",
-        "imagen": "static/img/URINARY_CARE x7,5k.jpg",
+        "imagen": "URINARY_CARE_x7,5k.jpeg",
         "precio": 32000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Urinary%20Care%207.5KG"
+        "descripcion": "Alimento balanceado para gatos con problemas urinarios"
     },
     {
         "id": 36,
         "nombre": "Urinary S-O 7.5KG",
-        "imagen": "static/img/URINARY_S-O_x7,5k.jpg",
+        "imagen": "URINARY_S-O_x7,5k.jpeg",
         "precio": 32000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Urinary%20S-O%207.5KG"
+        "descripcion": "Alimento balanceado para gatos con problemas urinarios"
     },
     {
         "id": 37,
         "nombre": "Urinary Perro 10KG",
-        "imagen": "static/img/URINARY_perro_10k.jpg",
+        "imagen": "URINARY_perro_10k.jpeg",
         "precio": 38000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Urinary%20Perro%2010KG"
+        "descripcion": "Alimento balanceado para perros con problemas urinarios"
     },
     {
         "id": 38,
         "nombre": "Mini Puppy 15KG",
-        "imagen": "static/img/Mini_puppy_x15k.jpg",
+        "imagen": "Mini_puppy_x15k.jpeg",
         "precio": 45000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Mini%20Puppy%2015KG"
+        "descripcion": "Alimento balanceado para cachorros"
     },
     {
         "id": 39,
         "nombre": "Mini Puppy 7.5KG",
-        "imagen": "static/img/Mini_puppy_x7.5k.jpg",
+        "imagen": "Mini_puppy_x7.5k.jpeg",
         "precio": 28000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Mini%20Puppy%207.5KG"
+        "descripcion": "Alimento balanceado para cachorros"
     },
     {
         "id": 40,
         "nombre": "Mini Adulto 7.5KG",
-        "imagen": "static/img/Mini_adulto_x7.5k.jpg",
+        "imagen": "Mini_adulto_x7.5k.jpeg",
         "precio": 26000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Mini%20Adulto%207.5KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 41,
         "nombre": "Fit 32 15KG",
-        "imagen": "static/img/FIT_32_x15k.jpg",
+        "imagen": "FIT_32_x15k.jpeg",
         "precio": 42000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Fit%2032%2015KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 42,
         "nombre": "Fit 32 7.5KG",
-        "imagen": "static/img/FIT_32_x7,5k .jpg",
+        "imagen": "FIT_32_x7,5k.jpeg",
         "precio": 28000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Fit%2032%207.5KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 43,
         "nombre": "Performance Gato 7.5KG",
-        "imagen": "static/img/Perf._Gato_x7,5k.jpg",
+        "imagen": "Perf._Gato_x7,5k.jpeg",
         "precio": 30000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Performance%20Gato%207.5KG"
+        "descripcion": "Alimento balanceado para gatos adultos"
     },
     {
         "id": 44,
         "nombre": "Performance Kitten 7.5KG",
-        "imagen": "static/img/Perf._Kitten_x7,5k.jpg",
+        "imagen": "Perf._Kitten_x7,5k.jpeg",
         "precio": 32000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Performance%20Kitten%207.5KG"
+        "descripcion": "Alimento balanceado para gatitos"
     },
     {
         "id": 45,
         "nombre": "Performance Junior 15KG",
-        "imagen": "static/img/Performance_junior_x15k.jpg",
+        "imagen": "Performance_junior_x15k.jpeg",
         "precio": 45000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Performance%20Junior%2015KG"
+        "descripcion": "Alimento balanceado para perros jóvenes"
     },
     {
         "id": 46,
         "nombre": "Performance Adulto 15KG",
-        "imagen": "static/img/Performance_adulto_x15k.jpg",
+        "imagen": "Performance_adulto_x15k.jpeg",
         "precio": 42000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Performance%20Adulto%2015KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 47,
         "nombre": "Performance Adulto 20KG",
-        "imagen": "static/img/Performance_adultox20k.jpg",
+        "imagen": "Performance_adultox20k.jpeg",
         "precio": 48000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Performance%20Adulto%2020KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 48,
         "nombre": "Medium Puppy 15KG",
-        "imagen": "static/img/Medium_puppy_x15k.jpg",
+        "imagen": "Medium_puppy_x15k.jpeg",
         "precio": 45000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Medium%20Puppy%2015KG"
+        "descripcion": "Alimento balanceado para cachorros"
     },
     {
         "id": 49,
         "nombre": "Medium Adulto 15KG",
-        "imagen": "static/img/Medium_adulto_x15k.jpg",
+        "imagen": "Medium_adulto_x15k.jpeg",
         "precio": 42000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Medium%20Adulto%2015KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 50,
         "nombre": "Infinity Cachorro 10KG",
-        "imagen": "static/img/Infinity_cachorrro_x10k.jpg",
+        "imagen": "Infinity_cachorrro_x10k.jpeg",
         "precio": 35000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Infinity%20Cachorro%2010KG"
+        "descripcion": "Alimento balanceado para cachorros"
     },
     {
         "id": 51,
         "nombre": "Infinity RP 15KG",
-        "imagen": "static/img/Infinity_RP x15k.jpg",
+        "imagen": "Infinity_RP_x15k.jpeg",
         "precio": 42000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Infinity%20RP%2015KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 52,
         "nombre": "Infinity Adulto 21KG",
-        "imagen": "static/img/Infinity_adulto_x21k.jpg",
+        "imagen": "Infinity_adulto_x21k.jpeg",
         "precio": 55000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Infinity%20Adulto%2021KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 53,
         "nombre": "Infinity Gato 10KG",
-        "imagen": "static/img/Infinity_gato_x10k.jpg",
+        "imagen": "Infinity_gato_x10k.jpeg",
         "precio": 35000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Infinity%20Gato%2010KG"
+        "descripcion": "Alimento balanceado para gatos adultos"
     },
     {
         "id": 54,
         "nombre": "Ultra Gato 10KG",
-        "imagen": "static/img/Ultra_gato_x10.jpg",
+        "imagen": "Ultra_gato_x10.jpeg",
         "precio": 38000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Ultra%20Gato%2010KG"
+        "descripcion": "Alimento balanceado para gatos adultos"
     },
     {
         "id": 55,
         "nombre": "Ultra Cachorro 10KG",
-        "imagen": "static/img/Ultra_cach_x10.jpg",
+        "imagen": "Ultra_cach_x10.jpeg",
         "precio": 40000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Ultra%20Cachorro%2010KG"
+        "descripcion": "Alimento balanceado para cachorros"
     },
     {
         "id": 56,
         "nombre": "Ultra Adulto 15KG",
-        "imagen": "static/img/Ultra_adulto_15k.jpg",
+        "imagen": "Ultra_adulto_15k.jpeg",
         "precio": 45000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Ultra%20Adulto%2015KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 57,
         "nombre": "Nutricare Gato 7.5KG",
-        "imagen": "static/img/Nutricare_gato_x7,5.jpg",
+        "imagen": "Nutricare_gato_x7,5.jpeg",
         "precio": 32000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Nutricare%20Gato%207.5KG"
+        "descripcion": "Alimento balanceado para gatos adultos"
     },
     {
         "id": 58,
         "nombre": "Nutricare 20KG",
-        "imagen": "static/img/Nutricare x20k.jpg",
+        "imagen": "Nutricare_x20k.jpeg",
         "precio": 48000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Nutricare%2020KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     }
 ]
 
