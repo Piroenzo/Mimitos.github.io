@@ -2,7 +2,7 @@
     <div class="productos-grid">
         {% for producto in productos %}
             <article class="producto" data-categoria="{{ producto.categoria }}">
-                <img src="{{ url_for('static', filename=producto.imagen) }}" 
+                <img src="{{ url_for('static', filename='img/' + producto.imagen) }}" 
                      alt="{{ producto.nombre }}" 
                      class="producto-img"
                      loading="lazy">
