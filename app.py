@@ -77,7 +77,7 @@ productos = [
     {
         "id": 1,
         "nombre": "Dog Selection Adulto 21KG",
-        "imagen": "Dog_Selection_adulto_x21k.jpeg",
+        "imagen": "img/Dog_Selection_adulto_x21k.jpeg",
         "precio": 45000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -85,7 +85,7 @@ productos = [
     {
         "id": 2,
         "nombre": "Dog Selection Cachorro 21KG",
-        "imagen": "Dog_election_cachorro_x21k.jpeg",
+        "imagen": "img/Dog_election_cachorro_x21k.jpeg",
         "precio": 48000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para cachorros"
@@ -93,7 +93,7 @@ productos = [
     {
         "id": 3,
         "nombre": "Dog Selection Adulto RP 15KG",
-        "imagen": "Dog_Selection_ad_RP_x15k.jpeg",
+        "imagen": "img/Dog_Selection_ad_RP_x15k.jpeg",
         "precio": 35000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -101,7 +101,7 @@ productos = [
     {
         "id": 4,
         "nombre": "Cat Selection 10KG",
-        "imagen": "Cat_Selection_x10k.jpeg",
+        "imagen": "img/Cat_Selection_x10k.jpeg",
         "precio": 28000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos"
@@ -109,7 +109,7 @@ productos = [
     {
         "id": 5,
         "nombre": "Excellent Gato Adulto 7.5KG",
-        "imagen": "Excellent_gato_x7.5k.jpeg",
+        "imagen": "img/Excellent_gato_x7.5k.jpeg",
         "precio": 32000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos adultos"
@@ -117,7 +117,7 @@ productos = [
     {
         "id": 6,
         "nombre": "Excellent Gato Urinario 7.5KG",
-        "imagen": "Excellent_urinary_x7.5k.jpeg",
+        "imagen": "img/Excellent_urinary_x7.5k.jpeg",
         "precio": 35000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos con problemas urinarios"
@@ -125,7 +125,7 @@ productos = [
     {
         "id": 7,
         "nombre": "Excellent Gato Adulto 15KG",
-        "imagen": "Excellent_gato_x15k.jpeg",
+        "imagen": "img/Excellent_gato_x15k.jpeg",
         "precio": 58000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos adultos"
@@ -133,7 +133,7 @@ productos = [
     {
         "id": 8,
         "nombre": "Cat Chow Gatito 8KG",
-        "imagen": "Cat_chow_gatito_x8k.jpeg",
+        "imagen": "img/Cat_chow_gatito_x8k.jpeg",
         "precio": 25000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatitos"
@@ -141,7 +141,7 @@ productos = [
     {
         "id": 9,
         "nombre": "Cat Chow Gatito 15KG",
-        "imagen": "Cat_chow_gatito_x15k.jpeg",
+        "imagen": "img/Cat_chow_gatito_x15k.jpeg",
         "precio": 42000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatitos"
@@ -149,7 +149,7 @@ productos = [
     {
         "id": 10,
         "nombre": "Cat Chow Adulto 8KG",
-        "imagen": "Cat_chow_adulto_x8k.jpeg",
+        "imagen": "img/Cat_chow_adulto_x8k.jpeg",
         "precio": 23000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos adultos"
@@ -157,7 +157,7 @@ productos = [
     {
         "id": 11,
         "nombre": "Cat Chow Adulto 15KG",
-        "imagen": "Cat_chow_adulto_x15k.jpeg",
+        "imagen": "img/Cat_chow_adulto_x15k.jpeg",
         "precio": 40000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos adultos"
@@ -165,7 +165,7 @@ productos = [
     {
         "id": 12,
         "nombre": "Dog Chow Cachorro 21KG",
-        "imagen": "Dog_chow_cachorro_x21k.jpeg",
+        "imagen": "img/Dog_chow_cachorro_x21k.jpeg",
         "precio": 42000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para cachorros"
@@ -173,7 +173,7 @@ productos = [
     {
         "id": 13,
         "nombre": "Dog Chow Adulto 21KG",
-        "imagen": "Dog_chow_adultox21k.jpeg",
+        "imagen": "img/Dog_chow_adultox21k.jpeg",
         "precio": 38000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -181,7 +181,7 @@ productos = [
     {
         "id": 14,
         "nombre": "Chacal 22KG",
-        "imagen": "Chacal_x22k.jpeg",
+        "imagen": "img/Chacal_x22k.jpeg",
         "precio": 35000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros"
@@ -189,7 +189,7 @@ productos = [
     {
         "id": 15,
         "nombre": "Tiernitos Adulto 21KG",
-        "imagen": "Tiernitos_adultox21k.jpeg",
+        "imagen": "img/Tiernitos_adultox21k.jpeg",
         "precio": 32000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -197,7 +197,7 @@ productos = [
     {
         "id": 16,
         "nombre": "Pachá 22KG",
-        "imagen": "Pachá_x22k.jpeg",
+        "imagen": "img/Pachá_x22k.jpeg",
         "precio": 35000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros"
@@ -205,7 +205,7 @@ productos = [
     {
         "id": 17,
         "nombre": "Maxi Adulto 15KG",
-        "imagen": "Maxi_adulto_x15k.jpeg",
+        "imagen": "img/Maxi_adulto_x15k.jpeg",
         "precio": 28000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -213,7 +213,7 @@ productos = [
     {
         "id": 18,
         "nombre": "Sabrositos Gato Pescado 11KG",
-        "imagen": "Sabrositos_gato_pescado_x11k.jpeg",
+        "imagen": "img/Sabrositos_gato_pescado_x11k.jpeg",
         "precio": 32000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos"
@@ -221,7 +221,7 @@ productos = [
     {
         "id": 19,
         "nombre": "Sabrositos Cachorro 8KG",
-        "imagen": "Sabrositos_cachorro_x8k.jpeg",
+        "imagen": "img/Sabrositos_cachorro_x8k.jpeg",
         "precio": 28000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para cachorros"
@@ -229,7 +229,7 @@ productos = [
     {
         "id": 20,
         "nombre": "Sabrositos Cachorro 18KG",
-        "imagen": "Sabrositos_cachorro_x18k.jpeg",
+        "imagen": "img/Sabrositos_cachorro_x18k.jpeg",
         "precio": 45000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para cachorros"
@@ -237,7 +237,7 @@ productos = [
     {
         "id": 21,
         "nombre": "Sabrositos Gato 20KG",
-        "imagen": "Sabrositos_gato_x20k.jpeg",
+        "imagen": "img/Sabrositos_gato_x20k.jpeg",
         "precio": 55000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos"
@@ -245,7 +245,7 @@ productos = [
     {
         "id": 22,
         "nombre": "Sabrositos Gato 10KG",
-        "imagen": "Sabrositos_gato_x10k.jpeg",
+        "imagen": "img/Sabrositos_gato_x10k.jpeg",
         "precio": 30000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos"
@@ -253,7 +253,7 @@ productos = [
     {
         "id": 23,
         "nombre": "Sabrositos Adulto 15KG",
-        "imagen": "Sabrositos_adulto_x15k.jpeg",
+        "imagen": "img/Sabrositos_adulto_x15k.jpeg",
         "precio": 35000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -261,7 +261,7 @@ productos = [
     {
         "id": 24,
         "nombre": "Sabrositos Adulto 22KG",
-        "imagen": "Sabrositos_adulto_x22k.jpeg",
+        "imagen": "img/Sabrositos_adulto_x22k.jpeg",
         "precio": 48000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -269,7 +269,7 @@ productos = [
     {
         "id": 25,
         "nombre": "Biomax Cachorro 15KG",
-        "imagen": "Biomax_Cach_x15kg.jpeg",
+        "imagen": "img/Biomax_Cach_x15kg.jpeg",
         "precio": 42000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para cachorros"
@@ -277,7 +277,7 @@ productos = [
     {
         "id": 26,
         "nombre": "Biomax Adulto RP 15KG",
-        "imagen": "Biomax_Adulto_Rp_x15kg.jpeg",
+        "imagen": "img/Biomax_Adulto_Rp_x15kg.jpeg",
         "precio": 38000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -285,7 +285,7 @@ productos = [
     {
         "id": 27,
         "nombre": "Biomax Adulto 20KG",
-        "imagen": "Biomax_Adulto_x20kg.jpeg",
+        "imagen": "img/Biomax_Adulto_x20kg.jpeg",
         "precio": 45000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -293,7 +293,7 @@ productos = [
     {
         "id": 28,
         "nombre": "Bred Dog Adulto 20KG",
-        "imagen": "Bred_Dog_Adulto_x20kg.jpeg",
+        "imagen": "img/Bred_Dog_Adulto_x20kg.jpeg",
         "precio": 42000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -301,7 +301,7 @@ productos = [
     {
         "id": 29,
         "nombre": "Old Prince Cordero Adulto/Cachorro 15KG",
-        "imagen": "Old_Prince_Cordero_Adulto_Cach_x15kg.jpeg",
+        "imagen": "img/Old_Prince_Cordero_Adulto_Cach_x15kg.jpeg",
         "precio": 55000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos y cachorros"
@@ -309,7 +309,7 @@ productos = [
     {
         "id": 30,
         "nombre": "Old Prince Cordero Adulto RP 15KG",
-        "imagen": "Old_Prince_Cordero_Adulto_Rp_x15kg.jpeg",
+        "imagen": "img/Old_Prince_Cordero_Adulto_Rp_x15kg.jpeg",
         "precio": 52000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -317,7 +317,7 @@ productos = [
     {
         "id": 31,
         "nombre": "Old Prince Cordero Adulto 15KG",
-        "imagen": "Old_Prince_Cordero_Adulto_x15kg.jpeg",
+        "imagen": "img/Old_Prince_Cordero_Adulto_x15kg.jpeg",
         "precio": 55000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -325,7 +325,7 @@ productos = [
     {
         "id": 32,
         "nombre": "Old Prince Tradicional 20KG",
-        "imagen": "Old_Prince_Tradicional_x20kg.jpeg",
+        "imagen": "img/Old_Prince_Tradicional_x20kg.jpeg",
         "precio": 48000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -333,7 +333,7 @@ productos = [
     {
         "id": 33,
         "nombre": "Mantenaince 22KG",
-        "imagen": "Mantenaince_x22kg.jpeg",
+        "imagen": "img/Mantenaince_x22kg.jpeg",
         "precio": 42000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -341,7 +341,7 @@ productos = [
     {
         "id": 34,
         "nombre": "Kitten 7.5KG",
-        "imagen": "Kitten_x7,5k.jpeg",
+        "imagen": "img/Kitten_x7,5k.jpeg",
         "precio": 28000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatitos"
@@ -349,7 +349,7 @@ productos = [
     {
         "id": 35,
         "nombre": "Urinary Care 7.5KG",
-        "imagen": "URINARY_CARE_x7,5k.jpeg",
+        "imagen": "img/URINARY_CARE_x7,5k.jpeg",
         "precio": 32000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos con problemas urinarios"
@@ -357,7 +357,7 @@ productos = [
     {
         "id": 36,
         "nombre": "Urinary S-O 7.5KG",
-        "imagen": "URINARY_S-O_x7,5k.jpeg",
+        "imagen": "img/URINARY_S-O_x7,5k.jpeg",
         "precio": 32000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos con problemas urinarios"
@@ -365,7 +365,7 @@ productos = [
     {
         "id": 37,
         "nombre": "Urinary Perro 10KG",
-        "imagen": "URINARY_perro_10k.jpeg",
+        "imagen": "img/URINARY_perro_10k.jpeg",
         "precio": 38000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros con problemas urinarios"
@@ -373,7 +373,7 @@ productos = [
     {
         "id": 38,
         "nombre": "Mini Puppy 15KG",
-        "imagen": "Mini_puppy_x15k.jpeg",
+        "imagen": "img/Mini_puppy_x15k.jpeg",
         "precio": 45000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para cachorros"
@@ -381,7 +381,7 @@ productos = [
     {
         "id": 39,
         "nombre": "Mini Puppy 7.5KG",
-        "imagen": "Mini_puppy_x7.5k.jpeg",
+        "imagen": "img/Mini_puppy_x7.5k.jpeg",
         "precio": 28000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para cachorros"
@@ -389,7 +389,7 @@ productos = [
     {
         "id": 40,
         "nombre": "Mini Adulto 7.5KG",
-        "imagen": "Mini_adulto_x7.5k.jpeg",
+        "imagen": "img/Mini_adulto_x7.5k.jpeg",
         "precio": 26000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -397,7 +397,7 @@ productos = [
     {
         "id": 41,
         "nombre": "Fit 32 15KG",
-        "imagen": "FIT_32_x15k.jpeg",
+        "imagen": "img/FIT_32_x15k.jpeg",
         "precio": 42000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -405,7 +405,7 @@ productos = [
     {
         "id": 42,
         "nombre": "Fit 32 7.5KG",
-        "imagen": "FIT_32_x7,5k.jpeg",
+        "imagen": "img/FIT_32_x7,5k.jpeg",
         "precio": 28000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -413,7 +413,7 @@ productos = [
     {
         "id": 43,
         "nombre": "Performance Gato 7.5KG",
-        "imagen": "Perf._Gato_x7,5k.jpeg",
+        "imagen": "img/Perf._Gato_x7,5k.jpeg",
         "precio": 30000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos adultos"
@@ -421,7 +421,7 @@ productos = [
     {
         "id": 44,
         "nombre": "Performance Kitten 7.5KG",
-        "imagen": "Perf._Kitten_x7,5k.jpeg",
+        "imagen": "img/Perf._Kitten_x7,5k.jpeg",
         "precio": 32000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatitos"
@@ -429,7 +429,7 @@ productos = [
     {
         "id": 45,
         "nombre": "Performance Junior 15KG",
-        "imagen": "Performance_junior_x15k.jpeg",
+        "imagen": "img/Performance_junior_x15k.jpeg",
         "precio": 45000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros jóvenes"
@@ -437,7 +437,7 @@ productos = [
     {
         "id": 46,
         "nombre": "Performance Adulto 15KG",
-        "imagen": "Performance_adulto_x15k.jpeg",
+        "imagen": "img/Performance_adulto_x15k.jpeg",
         "precio": 42000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -445,7 +445,7 @@ productos = [
     {
         "id": 47,
         "nombre": "Performance Adulto 20KG",
-        "imagen": "Performance_adultox20k.jpeg",
+        "imagen": "img/Performance_adultox20k.jpeg",
         "precio": 48000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -453,7 +453,7 @@ productos = [
     {
         "id": 48,
         "nombre": "Medium Puppy 15KG",
-        "imagen": "Medium_puppy_x15k.jpeg",
+        "imagen": "img/Medium_puppy_x15k.jpeg",
         "precio": 45000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para cachorros"
@@ -461,7 +461,7 @@ productos = [
     {
         "id": 49,
         "nombre": "Medium Adulto 15KG",
-        "imagen": "Medium_adulto_x15k.jpeg",
+        "imagen": "img/Medium_adulto_x15k.jpeg",
         "precio": 42000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -469,7 +469,7 @@ productos = [
     {
         "id": 50,
         "nombre": "Infinity Cachorro 10KG",
-        "imagen": "Infinity_cachorrro_x10k.jpeg",
+        "imagen": "img/Infinity_cachorrro_x10k.jpeg",
         "precio": 35000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para cachorros"
@@ -477,7 +477,7 @@ productos = [
     {
         "id": 51,
         "nombre": "Infinity RP 15KG",
-        "imagen": "Infinity_RP_x15k.jpeg",
+        "imagen": "img/Infinity_RP_x15k.jpeg",
         "precio": 42000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -485,7 +485,7 @@ productos = [
     {
         "id": 52,
         "nombre": "Infinity Adulto 21KG",
-        "imagen": "Infinity_adulto_x21k.jpeg",
+        "imagen": "img/Infinity_adulto_x21k.jpeg",
         "precio": 55000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -493,7 +493,7 @@ productos = [
     {
         "id": 53,
         "nombre": "Infinity Gato 10KG",
-        "imagen": "Infinity_gato_x10k.jpeg",
+        "imagen": "img/Infinity_gato_x10k.jpeg",
         "precio": 35000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos adultos"
@@ -501,7 +501,7 @@ productos = [
     {
         "id": 54,
         "nombre": "Ultra Gato 10KG",
-        "imagen": "Ultra_gato_x10.jpeg",
+        "imagen": "img/Ultra_gato_x10.jpeg",
         "precio": 38000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos adultos"
@@ -509,7 +509,7 @@ productos = [
     {
         "id": 55,
         "nombre": "Ultra Cachorro 10KG",
-        "imagen": "Ultra_cach_x10.jpeg",
+        "imagen": "img/Ultra_cach_x10.jpeg",
         "precio": 40000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para cachorros"
