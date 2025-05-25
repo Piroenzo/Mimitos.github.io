@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto - Panel de Administración</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <a href="{{ url_for('admin_productos') }}" class="volver">
+        <i class="fas fa-arrow-left"></i> Volver a la lista de productos
+    </a>
+
+    <div class="admin-header">
+        <h1 class="admin-title">Agregar Nuevo Producto</h1>
+    </div>
+
+    <div class="form-container">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nombre">Nombre del Producto *</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción *</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="precio">Precio *</label>
+                <input type="number" id="precio" name="precio" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="categoria">Categoría *</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="">Seleccionar categoría</option>
+                    <option value="perros">Perros</option>
+                    <option value="gatos">Gatos</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="imagen">URL de la Imagen *</label>
+                <input type="url" id="imagen" name="imagen" required>
+                <img src="" alt="Vista previa" class="preview-imagen" id="preview" style="display: none;">
+            </div>
+
+            <button type="submit" class="btn-submit">
+                <i class="fas fa-save"></i> Guardar Producto
+            </button>
+        </form>
+    </div>
+
+    <script>
+        // Vista previa de la imagen
+        const imagenInput = document.getElementById('imagen');
+        const preview = document.getElementById('preview');
+
+        imagenInput.addEventListener('input', function() {
+            if (this.value) {
+                preview.src = this.value;
+                preview.style.display = 'block';
+            } else {
+                preview.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html> 
