@@ -1,53 +1,46 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Acceso Administración</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
-            background: #FFF5F2;
             font-family: 'Poppins', sans-serif;
+            background: #FFF5F2;
+            color: #2D3142;
+            margin: 0;
+            padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            margin: 0;
         }
         .login-container {
             background: #fff;
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(255,107,53,0.10);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-width: 320px;
-        }
-        .login-container h1 {
-            color: #FF6B35;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-        .login-container form {
+            padding: 2rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 400px;
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
+        }
+        h1 {
+            color: #FF6B35;
+            margin-bottom: 2rem;
+            text-align: center;
         }
         .input-group {
             display: flex;
             align-items: center;
-            background: #FFF5F2;
-            border-radius: 50px;
-            padding: 0.7rem 1.2rem;
-            border: 2px solid #FF6B35;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            background: #f8f9fa;
         }
         .input-group i {
+            margin-right: 1rem;
             color: #FF6B35;
-            margin-right: 0.7rem;
         }
         .input-group input {
             border: none;
@@ -55,7 +48,6 @@
             outline: none;
             font-size: 1rem;
             flex: 1;
-            color: #2D3142;
         }
         .btn-login {
             background: #FF6B35;
@@ -67,6 +59,7 @@
             font-weight: bold;
             cursor: pointer;
             transition: background 0.3s;
+            width: 100%;
         }
         .btn-login:hover {
             background: #FF8C61;
@@ -82,6 +75,8 @@
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s;
+            display: block;
+            text-align: center;
         }
         .volver:hover {
             color: #FF8C61;
@@ -104,111 +99,4 @@
         <a href="{{ url_for('index') }}" class="volver"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
     </div>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Acceso Administración</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        body {
-            background: #FFF5F2;
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .login-container {
-            background: #fff;
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(255,107,53,0.10);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-width: 320px;
-        }
-        .login-container h1 {
-            color: #FF6B35;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-        .login-container form {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-        .input-group {
-            display: flex;
-            align-items: center;
-            background: #FFF5F2;
-            border-radius: 50px;
-            padding: 0.7rem 1.2rem;
-            border: 2px solid #FF6B35;
-        }
-        .input-group i {
-            color: #FF6B35;
-            margin-right: 0.7rem;
-        }
-        .input-group input {
-            border: none;
-            background: transparent;
-            outline: none;
-            font-size: 1rem;
-            flex: 1;
-            color: #2D3142;
-        }
-        .btn-login {
-            background: #FF6B35;
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .btn-login:hover {
-            background: #FF8C61;
-        }
-        .error {
-            color: #f44336;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        .volver {
-            margin-top: 1.5rem;
-            color: #FF6B35;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        .volver:hover {
-            color: #FF8C61;
-        }
-    </style>
-</head>
-<body>
-    <div class="login-container">
-        <h1>Acceso Administración</h1>
-        {% if error %}
-            <div class="error"><i class="fas fa-exclamation-triangle"></i> {{ error }}</div>
-        {% endif %}
-        <form method="POST">
-            <div class="input-group">
-                <i class="fas fa-lock"></i>
-                <input type="password" name="password" placeholder="Contraseña" required autofocus>
-            </div>
-            <button type="submit" class="btn-login">Ingresar</button>
-        </form>
-        <a href="{{ url_for('index') }}" class="volver"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
-    </div>
-</body>
->>>>>>> 25fbf7f660c94e00ec51293a4afc102aa8f56765
 </html> 
