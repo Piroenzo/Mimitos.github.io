@@ -77,130 +77,130 @@ productos = [
     {
         "id": 1,
         "nombre": "Dog Selection Adulto 21KG",
-        "imagen": "static/img/Dog_Selection_adulto_x21k.jpeg",
+        "imagen": "Dog_Selection_adulto_x21k.jpeg",
         "precio": 45000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Dog%20Selection%20Adulto%2021KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 2,
         "nombre": "Dog Selection Cachorro 21KG",
-        "imagen": "static/img/Dog_election_cachorro_x21k.jpeg",
+        "imagen": "Dog_election_cachorro_x21k.jpeg",
         "precio": 48000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Dog%20Selection%20Cachorro%2021KG"
+        "descripcion": "Alimento balanceado para cachorros"
     },
     {
         "id": 3,
         "nombre": "Dog Selection Adulto RP 15KG",
-        "imagen": "static/img/Dog_Selection_ad_RP_x15k .jpeg",
+        "imagen": "Dog_Selection_ad_RP_x15k.jpeg",
         "precio": 35000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Dog%20Selection%20Adulto%20RP%2015KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 4,
         "nombre": "Cat Selection 10KG",
-        "imagen": "static/img/Cat_Selection_x10k.jpeg",
+        "imagen": "Cat_Selection_x10k.jpeg",
         "precio": 28000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Cat%20Selection%2010KG"
+        "descripcion": "Alimento balanceado para gatos"
     },
     {
         "id": 5,
         "nombre": "Excellent Gato Adulto 7.5KG",
-        "imagen": "static/img/Excellent_gato_x7.5k.jpeg",
+        "imagen": "Excellent_gato_x7.5k.jpeg",
         "precio": 32000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Excellent%20Gato%20Adulto%207.5KG"
+        "descripcion": "Alimento balanceado para gatos adultos"
     },
     {
         "id": 6,
         "nombre": "Excellent Gato Urinario 7.5KG",
-        "imagen": "static/img/Excellent_urinary_x7.5k.jpeg",
+        "imagen": "Excellent_urinary_x7.5k.jpeg",
         "precio": 35000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Excellent%20Gato%20Urinario%207.5KG"
+        "descripcion": "Alimento balanceado para gatos con problemas urinarios"
     },
     {
         "id": 7,
         "nombre": "Excellent Gato Adulto 15KG",
-        "imagen": "static/img/Excellent_gato_x15k .jpeg",
+        "imagen": "Excellent_gato_x15k.jpeg",
         "precio": 58000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Excellent%20Gato%20Adulto%2015KG"
+        "descripcion": "Alimento balanceado para gatos adultos"
     },
     {
         "id": 8,
         "nombre": "Cat Chow Gatito 8KG",
-        "imagen": "static/img/Cat_chow_gatito_x8k .jpeg",
+        "imagen": "Cat_chow_gatito_x8k.jpeg",
         "precio": 25000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Cat%20Chow%20Gatito%208KG"
+        "descripcion": "Alimento balanceado para gatitos"
     },
     {
         "id": 9,
         "nombre": "Cat Chow Gatito 15KG",
-        "imagen": "static/img/Cat_chow_gatito_x15k.jpeg",
+        "imagen": "Cat_chow_gatito_x15k.jpeg",
         "precio": 42000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Cat%20Chow%20Gatito%2015KG"
+        "descripcion": "Alimento balanceado para gatitos"
     },
     {
         "id": 10,
         "nombre": "Cat Chow Adulto 8KG",
-        "imagen": "static/img/Cat_chow_adulto_x8k.jpeg",
+        "imagen": "Cat_chow_adulto_x8k.jpeg",
         "precio": 23000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Cat%20Chow%20Adulto%208KG"
+        "descripcion": "Alimento balanceado para gatos adultos"
     },
     {
         "id": 11,
         "nombre": "Cat Chow Adulto 15KG",
-        "imagen": "static/img/Cat_chow_adulto_x15k .jpeg",
+        "imagen": "Cat_chow_adulto_x15k.jpeg",
         "precio": 40000,
         "categoria": "gatos",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Cat%20Chow%20Adulto%2015KG"
+        "descripcion": "Alimento balanceado para gatos adultos"
     },
     {
         "id": 12,
         "nombre": "Dog Chow Cachorro 21KG",
-        "imagen": "static/img/Dog_chow_cachorro_x21k.jpeg",
+        "imagen": "Dog_chow_cachorro_x21k.jpeg",
         "precio": 42000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Dog%20Chow%20Cachorro%2021KG"
+        "descripcion": "Alimento balanceado para cachorros"
     },
     {
         "id": 13,
         "nombre": "Dog Chow Adulto 21KG",
-        "imagen": "static/img/Dog_chow_adultox21k.jpeg",
+        "imagen": "Dog_chow_adultox21k.jpeg",
         "precio": 38000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Dog%20Chow%20Adulto%2021KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 14,
         "nombre": "Chacal 22KG",
-        "imagen": "static/img/Chacal_x22k.jpeg",
+        "imagen": "Chacal_x22k.jpeg",
         "precio": 35000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Chacal%2022KG"
+        "descripcion": "Alimento balanceado para perros"
     },
     {
         "id": 15,
         "nombre": "Tiernitos Adulto 21KG",
-        "imagen": "static/img/Tiernitos_adultox21k.jpeg",
+        "imagen": "Tiernitos_adultox21k.jpeg",
         "precio": 32000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Tiernitos%20Adulto%2021KG"
+        "descripcion": "Alimento balanceado para perros adultos"
     },
     {
         "id": 16,
         "nombre": "Pachá 22KG",
-        "imagen": "static/img/Pachá_x22k.jpeg",
-        "precio": 33000,
+        "imagen": "Pachá_x22k.jpeg",
+        "precio": 35000,
         "categoria": "perros",
-        "link": "https://wa.me/5492323534156?text=Hola,%20quiero%20consultar%20por%20el%20producto%20Pachá%2022KG"
+        "descripcion": "Alimento balanceado para perros"
     },
     {
         "id": 17,
@@ -563,8 +563,8 @@ def index():
         if cached_data:
             return render_template('index.html', 
                                  productos=cached_data['productos'],
-                                 current_page=page,
-                                 total_pages=cached_data['total_pages'],
+                                 pagina=page,
+                                 paginas=cached_data['total_pages'],
                                  busqueda=busqueda)
 
         # Si no hay caché, calcular los datos
@@ -587,8 +587,8 @@ def index():
 
         return render_template('index.html',
                              productos=productos_pagina,
-                             current_page=page,
-                             total_pages=total_pages,
+                             pagina=page,
+                             paginas=total_pages,
                              busqueda=busqueda)
     except Exception as e:
         app.logger.error(f'Error en la página principal: {str(e)}')
@@ -615,8 +615,8 @@ def productos_categoria(categoria):
         
         return render_template('index.html', 
                              productos=productos_pagina,
-                             current_page=page,
-                             total_pages=total_pages,
+                             pagina=page,
+                             paginas=total_pages,
                              categoria_actual=categoria)
     except Exception as e:
         app.logger.error(f'Error al filtrar productos: {str(e)}')
@@ -644,8 +644,8 @@ def buscar_productos():
 
         return render_template('index.html',
                              productos=productos_pagina,
-                             current_page=page,
-                             total_pages=total_pages,
+                             pagina=page,
+                             paginas=total_pages,
                              busqueda=query)
     except Exception as e:
         app.logger.error(f'Error en la búsqueda: {str(e)}')
@@ -674,8 +674,8 @@ def productos_ajax():
                              productos=productos_pagina)
         
         paginacion = render_template('_paginacion.html',
-                                   current_page=page,
-                                   total_pages=total_pages)
+                                   pagina=page,
+                                   paginas=total_pages)
         
         response_data = {
             'html': html,
@@ -718,8 +718,8 @@ def buscar_productos_ajax():
         
         # Renderizar la paginación
         paginacion = render_template('_paginacion.html',
-                                   current_page=page,
-                                   total_pages=total_pages,
+                                   pagina=page,
+                                   paginas=total_pages,
                                    busqueda=query)
         
         return jsonify({
