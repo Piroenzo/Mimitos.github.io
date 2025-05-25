@@ -1,26 +1,25 @@
-<<<<<<< HEAD
-<div class="producto-grid">
-    {% for producto in productos %}
-    <div class="producto" data-categoria="{{ producto.categoria }}">
-        <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}">
-        <h3>{{ producto.nombre }}</h3>
-        <p class="precio">${{ producto.precio }}</p>
-        <a href="{{ producto.link }}" class="boton-wsp" target="_blank">
-            <i class="fab fa-whatsapp"></i> Consultar
-        </a>
+{% if productos %}
+    <div class="productos-grid">
+        {% for producto in productos %}
+            <article class="producto" data-categoria="{{ producto.categoria }}">
+                <img src="{{ url_for('static', filename='img/productos/' + producto.imagen) }}" 
+                     alt="{{ producto.nombre }}" 
+                     class="producto-img"
+                     loading="lazy">
+                <div class="producto-info">
+                    <h3>{{ producto.nombre }}</h3>
+                    <p class="producto-precio">${{ producto.precio }}</p>
+                    <p class="producto-descripcion">{{ producto.descripcion }}</p>
+                    <a href="https://wa.me/5492323534156?text=Hola, me interesa el producto: {{ producto.nombre }}" 
+                       class="boton-wsp" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> Consultar
+                    </a>
+                </div>
+            </article>
+        {% endfor %}
     </div>
-    {% endfor %}
-=======
-<div class="producto-grid">
-    {% for producto in productos %}
-    <div class="producto" data-categoria="{{ producto.categoria }}">
-        <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}">
-        <h3>{{ producto.nombre }}</h3>
-        <p class="precio">${{ producto.precio }}</p>
-        <a href="{{ producto.link }}" class="boton-wsp" target="_blank">
-            <i class="fab fa-whatsapp"></i> Consultar
-        </a>
-    </div>
-    {% endfor %}
->>>>>>> 25fbf7f660c94e00ec51293a4afc102aa8f56765
-</div> 
+{% else %}
+    <p class="no-productos">No se encontraron productos.</p>
+{% endif %} 
