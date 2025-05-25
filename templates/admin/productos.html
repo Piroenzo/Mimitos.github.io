@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -55,4 +56,63 @@
         </tbody>
     </table>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Productos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <a href="{{ url_for('index') }}" class="volver-inicio">
+        <i class="fas fa-arrow-left"></i> Volver al inicio
+    </a>
+
+    <div class="admin-header">
+        <h1 class="admin-title">Panel de Administración - Productos</h1>
+        <a href="{{ url_for('agregar_producto') }}" class="btn-agregar">
+            <i class="fas fa-plus"></i> Agregar Producto
+        </a>
+    </div>
+
+    <table class="productos-table">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+            <tr>
+                <td>
+                    <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}" class="producto-imagen">
+                </td>
+                <td>{{ producto.nombre }}</td>
+                <td>{{ producto.descripcion }}</td>
+                <td>${{ producto.precio }}</td>
+                <td>{{ producto.categoria }}</td>
+                <td class="acciones">
+                    <a href="{{ url_for('editar_producto', id=producto.id) }}" class="btn-editar">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <form action="{{ url_for('eliminar_producto', id=producto.id) }}" method="POST" style="display: inline;">
+                        <button type="submit" class="btn-eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+>>>>>>> 25fbf7f660c94e00ec51293a4afc102aa8f56765
 </html> 
