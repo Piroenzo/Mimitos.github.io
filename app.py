@@ -13,7 +13,10 @@ import shutil
 from pathlib import Path
 
 # Configuración de la aplicación
-app = Flask(__name__)
+app = Flask(__name__,
+           template_folder='templates',
+           static_folder='static',
+           static_url_path='/static')
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-key-please-change')
 app.config['MAIL_SERVER'] = os.environ.get('MAIL_SERVER', 'smtp.gmail.com')
 app.config['MAIL_PORT'] = int(os.environ.get('MAIL_PORT', 587))
@@ -36,8 +39,21 @@ app.logger.info(f'Directorio estático: {STATIC_DIR}')
 # Verificar directorios
 if not os.path.exists(TEMPLATES_DIR):
     app.logger.error(f'Directorio de plantillas no encontrado: {TEMPLATES_DIR}')
+    # Intentar crear el directorio si no existe
+    try:
+        os.makedirs(TEMPLATES_DIR, exist_ok=True)
+        app.logger.info(f'Directorio de plantillas creado: {TEMPLATES_DIR}')
+    except Exception as e:
+        app.logger.error(f'Error al crear directorio de plantillas: {str(e)}')
+
 if not os.path.exists(STATIC_DIR):
     app.logger.error(f'Directorio estático no encontrado: {STATIC_DIR}')
+    # Intentar crear el directorio si no existe
+    try:
+        os.makedirs(STATIC_DIR, exist_ok=True)
+        app.logger.info(f'Directorio estático creado: {STATIC_DIR}')
+    except Exception as e:
+        app.logger.error(f'Error al crear directorio estático: {str(e)}')
 
 # Listar archivos en directorios
 if os.path.exists(TEMPLATES_DIR):
@@ -512,7 +528,8 @@ def index():
             alternative_paths = [
                 os.path.join(BASE_DIR, 'templates', 'index.html'),
                 os.path.join(os.getcwd(), 'templates', 'index.html'),
-                'templates/index.html'
+                'templates/index.html',
+                '/opt/render/project/src/templates/index.html'
             ]
             for path in alternative_paths:
                 app.logger.info(f'Intentando ruta alternativa: {path}')
@@ -521,7 +538,16 @@ def index():
                     template_path = path
                     break
             else:
-                return render_template('error.html', error="Error de configuración del servidor"), 500
+                # Si no se encuentra la plantilla, intentar renderizar directamente
+                try:
+                    return render_template('index.html',
+                                         productos=[],
+                                         pagina=1,
+                                         paginas=1,
+                                         busqueda='')
+                except Exception as template_error:
+                    app.logger.error(f'Error al renderizar plantilla: {str(template_error)}')
+                    return render_template('error.html', error="Error de configuración del servidor"), 500
 
         page = request.args.get('page', 1, type=int)
         busqueda = request.args.get('q', '')
