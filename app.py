@@ -518,37 +518,8 @@ def login_required(f):
 @app.route('/')
 def index():
     try:
-        # Verificar que la plantilla existe
-        template_path = os.path.join(TEMPLATES_DIR, 'index.html')
-        app.logger.info(f'Buscando plantilla en: {template_path}')
+        app.logger.info('Iniciando renderizado de página principal')
         
-        if not os.path.exists(template_path):
-            app.logger.error(f'Plantilla index.html no encontrada en: {template_path}')
-            # Intentar buscar en otras ubicaciones comunes
-            alternative_paths = [
-                os.path.join(BASE_DIR, 'templates', 'index.html'),
-                os.path.join(os.getcwd(), 'templates', 'index.html'),
-                'templates/index.html',
-                '/opt/render/project/src/templates/index.html'
-            ]
-            for path in alternative_paths:
-                app.logger.info(f'Intentando ruta alternativa: {path}')
-                if os.path.exists(path):
-                    app.logger.info(f'Plantilla encontrada en ruta alternativa: {path}')
-                    template_path = path
-                    break
-            else:
-                # Si no se encuentra la plantilla, intentar renderizar directamente
-                try:
-                    return render_template('index.html',
-                                         productos=[],
-                                         pagina=1,
-                                         paginas=1,
-                                         busqueda='')
-                except Exception as template_error:
-                    app.logger.error(f'Error al renderizar plantilla: {str(template_error)}')
-                    return render_template('error.html', error="Error de configuración del servidor"), 500
-
         page = request.args.get('page', 1, type=int)
         busqueda = request.args.get('q', '')
         per_page = 12
@@ -563,6 +534,7 @@ def index():
         
         if cached_data:
             try:
+                app.logger.info('Usando datos en caché')
                 return render_template('index.html', 
                                      productos=cached_data['productos'],
                                      pagina=page,
@@ -575,6 +547,7 @@ def index():
                     del cache[cache_key]
 
         # Si no hay caché o hubo error, calcular los datos
+        app.logger.info('Calculando datos frescos')
         if busqueda:
             productos_filtrados = [p for p in productos if busqueda.lower() in p['nombre'].lower()]
         else:
@@ -591,7 +564,6 @@ def index():
 
                 # Validar imagen
                 imagen_path = os.path.join(STATIC_DIR, producto.get('imagen', ''))
-                app.logger.info(f'Verificando imagen: {imagen_path}')
                 if not os.path.exists(imagen_path):
                     app.logger.warning(f"Imagen no encontrada para producto {producto.get('id')}: {producto.get('imagen')}")
                     continue
@@ -620,6 +592,7 @@ def index():
             }
             set_cached_data(cache_key, cache_data)
 
+        app.logger.info('Intentando renderizar plantilla')
         try:
             return render_template('index.html',
                                  productos=productos_pagina,
@@ -628,7 +601,17 @@ def index():
                                  busqueda=busqueda)
         except Exception as template_error:
             app.logger.error(f'Error al renderizar plantilla: {str(template_error)}')
-            return render_template('error.html', error="Error al mostrar la página"), 500
+            # Intentar renderizar una versión mínima
+            try:
+                app.logger.info('Intentando renderizar versión mínima')
+                return render_template('index.html',
+                                     productos=[],
+                                     pagina=1,
+                                     paginas=1,
+                                     busqueda='')
+            except Exception as min_error:
+                app.logger.error(f'Error al renderizar versión mínima: {str(min_error)}')
+                return render_template('error.html', error="Error al mostrar la página"), 500
 
     except Exception as e:
         app.logger.error(f'Error en la página principal: {str(e)}')
