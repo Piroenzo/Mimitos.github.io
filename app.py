@@ -23,6 +23,28 @@ app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD', 'lakj dbwp gkdq ms
 app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME', 'mimitos.balanceados@gmail.com')
 app.config['ADMIN_PASSWORD'] = 'mimitos2024'
 
+# Configuración de rutas
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+
+# Logging de rutas al inicio
+app.logger.info(f'Directorio base: {BASE_DIR}')
+app.logger.info(f'Directorio de plantillas: {TEMPLATES_DIR}')
+app.logger.info(f'Directorio estático: {STATIC_DIR}')
+
+# Verificar directorios
+if not os.path.exists(TEMPLATES_DIR):
+    app.logger.error(f'Directorio de plantillas no encontrado: {TEMPLATES_DIR}')
+if not os.path.exists(STATIC_DIR):
+    app.logger.error(f'Directorio estático no encontrado: {STATIC_DIR}')
+
+# Listar archivos en directorios
+if os.path.exists(TEMPLATES_DIR):
+    app.logger.info(f'Archivos en templates: {os.listdir(TEMPLATES_DIR)}')
+if os.path.exists(STATIC_DIR):
+    app.logger.info(f'Archivos en static: {os.listdir(STATIC_DIR)}')
+
 # Configuración de logging
 if not os.path.exists('logs'):
     os.mkdir('logs')
@@ -480,11 +502,26 @@ def login_required(f):
 @app.route('/')
 def index():
     try:
-        # Verificar que la plantilla existe usando ruta absoluta
-        template_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates', 'index.html')
+        # Verificar que la plantilla existe
+        template_path = os.path.join(TEMPLATES_DIR, 'index.html')
+        app.logger.info(f'Buscando plantilla en: {template_path}')
+        
         if not os.path.exists(template_path):
             app.logger.error(f'Plantilla index.html no encontrada en: {template_path}')
-            return render_template('error.html', error="Error de configuración del servidor"), 500
+            # Intentar buscar en otras ubicaciones comunes
+            alternative_paths = [
+                os.path.join(BASE_DIR, 'templates', 'index.html'),
+                os.path.join(os.getcwd(), 'templates', 'index.html'),
+                'templates/index.html'
+            ]
+            for path in alternative_paths:
+                app.logger.info(f'Intentando ruta alternativa: {path}')
+                if os.path.exists(path):
+                    app.logger.info(f'Plantilla encontrada en ruta alternativa: {path}')
+                    template_path = path
+                    break
+            else:
+                return render_template('error.html', error="Error de configuración del servidor"), 500
 
         page = request.args.get('page', 1, type=int)
         busqueda = request.args.get('q', '')
@@ -526,8 +563,9 @@ def index():
                     producto['precio'] = 0
                     app.logger.warning(f"Precio inválido para producto {producto.get('id')}: {producto.get('precio')}")
 
-                # Validar imagen usando ruta absoluta
-                imagen_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static', producto.get('imagen', ''))
+                # Validar imagen
+                imagen_path = os.path.join(STATIC_DIR, producto.get('imagen', ''))
+                app.logger.info(f'Verificando imagen: {imagen_path}')
                 if not os.path.exists(imagen_path):
                     app.logger.warning(f"Imagen no encontrada para producto {producto.get('id')}: {producto.get('imagen')}")
                     continue
