@@ -358,6 +358,7 @@ productos = [
         "id": 36,
         "nombre": "Urinary S-O 7.5KG",
         "imagen": "img/URINARY_S-O_x7,5k.jpeg",
+        "precio": 32000,
         "categoria": "gatos",
         "descripcion": "Alimento balanceado para gatos con problemas urinarios"
     },
@@ -404,7 +405,7 @@ productos = [
     {
         "id": 42,
         "nombre": "Fit 32 7.5KG",
-        "imagen": "img/FIT_32_x15k.jpeg",
+        "imagen": "img/FIT_32_x7,5k .jpeg",
         "precio": 28000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
@@ -462,78 +463,6 @@ productos = [
         "nombre": "Medium Adulto 15KG",
         "imagen": "img/Medium_adulto_x15k.jpeg",
         "precio": 42000,
-        "categoria": "perros",
-        "descripcion": "Alimento balanceado para perros adultos"
-    },
-    {
-        "id": 50,
-        "nombre": "Infinity Cachorro 10KG",
-        "imagen": "img/Infinity_cachorrro_x10k.jpeg",
-        "precio": 35000,
-        "categoria": "perros",
-        "descripcion": "Alimento balanceado para cachorros"
-    },
-    {
-        "id": 51,
-        "nombre": "Infinity RP 15KG",
-        "imagen": "img/Infinity_RP x15k.jpeg",
-        "precio": 42000,
-        "categoria": "perros",
-        "descripcion": "Alimento balanceado para perros adultos"
-    },
-    {
-        "id": 52,
-        "nombre": "Infinity Adulto 21KG",
-        "imagen": "img/Infinity_adulto_x21k.jpeg",
-        "precio": 55000,
-        "categoria": "perros",
-        "descripcion": "Alimento balanceado para perros adultos"
-    },
-    {
-        "id": 53,
-        "nombre": "Infinity Gato 10KG",
-        "imagen": "img/Infinity_gato_x10k.jpeg",
-        "precio": 35000,
-        "categoria": "gatos",
-        "descripcion": "Alimento balanceado para gatos adultos"
-    },
-    {
-        "id": 54,
-        "nombre": "Ultra Gato 10KG",
-        "imagen": "img/Ultra_gato_x10.jpeg",
-        "precio": 38000,
-        "categoria": "gatos",
-        "descripcion": "Alimento balanceado para gatos adultos"
-    },
-    {
-        "id": 55,
-        "nombre": "Ultra Cachorro 10KG",
-        "imagen": "img/Ultra_cach_x10.jpeg",
-        "precio": 40000,
-        "categoria": "perros",
-        "descripcion": "Alimento balanceado para cachorros"
-    },
-    {
-        "id": 56,
-        "nombre": "Ultra Adulto 15KG",
-        "imagen": "img/Ultra_adulto_15k.jpeg",
-        "precio": 45000,
-        "categoria": "perros",
-        "descripcion": "Alimento balanceado para perros adultos"
-    },
-    {
-        "id": 57,
-        "nombre": "Nutricare Gato 7.5KG",
-        "imagen": "img/Nutricare_gato_x7,5.jpeg",
-        "precio": 32000,
-        "categoria": "gatos",
-        "descripcion": "Alimento balanceado para gatos adultos"
-    },
-    {
-        "id": 58,
-        "nombre": "Nutricare 20KG",
-        "imagen": "img/Nutricare x20k.jpeg",
-        "precio": 48000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros adultos"
     }
