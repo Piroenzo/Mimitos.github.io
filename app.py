@@ -480,44 +480,91 @@ def login_required(f):
 @app.route('/')
 def index():
     try:
+        # Verificar que la plantilla existe
+        if not os.path.exists('templates/index.html'):
+            app.logger.error('Plantilla index.html no encontrada')
+            return render_template('error.html', error="Error de configuración del servidor"), 500
+
         page = request.args.get('page', 1, type=int)
         busqueda = request.args.get('q', '')
         per_page = 12
+
+        # Validar página
+        if page < 1:
+            page = 1
 
         # Intentar obtener datos del caché
         cache_key = f'index_{page}_{busqueda}'
         cached_data = get_cached_data(cache_key)
         
         if cached_data:
-            return render_template('index.html', 
-                                 productos=cached_data['productos'],
-                                 pagina=page,
-                                 paginas=cached_data['total_pages'],
-                                 busqueda=busqueda)
+            try:
+                return render_template('index.html', 
+                                     productos=cached_data['productos'],
+                                     pagina=page,
+                                     paginas=cached_data['total_pages'],
+                                     busqueda=busqueda)
+            except Exception as template_error:
+                app.logger.error(f'Error al renderizar plantilla desde caché: {str(template_error)}')
+                # Limpiar caché en caso de error
+                if cache_key in cache:
+                    del cache[cache_key]
 
-        # Si no hay caché, calcular los datos
+        # Si no hay caché o hubo error, calcular los datos
         if busqueda:
             productos_filtrados = [p for p in productos if busqueda.lower() in p['nombre'].lower()]
         else:
             productos_filtrados = productos
 
+        # Validar y limpiar productos
+        productos_validos = []
+        for producto in productos_filtrados:
+            try:
+                # Validar precio
+                if not isinstance(producto.get('precio'), (int, float)) or producto.get('precio') < 0:
+                    producto['precio'] = 0
+                    app.logger.warning(f"Precio inválido para producto {producto.get('id')}: {producto.get('precio')}")
+
+                # Validar imagen
+                imagen_path = os.path.join('static', producto.get('imagen', ''))
+                if not os.path.exists(imagen_path):
+                    app.logger.warning(f"Imagen no encontrada para producto {producto.get('id')}: {producto.get('imagen')}")
+                    continue
+
+                # Validar campos requeridos
+                if not all(key in producto for key in ['id', 'nombre', 'precio', 'categoria', 'imagen']):
+                    app.logger.warning(f"Producto {producto.get('id')} falta campos requeridos")
+                    continue
+
+                productos_validos.append(producto)
+            except Exception as e:
+                app.logger.error(f"Error procesando producto {producto.get('id')}: {str(e)}")
+                continue
+
+        # Calcular paginación
         start_idx = (page - 1) * per_page
         end_idx = start_idx + per_page
-        productos_pagina = productos_filtrados[start_idx:end_idx]
-        total_pages = ceil(len(productos_filtrados) / per_page)
+        productos_pagina = productos_validos[start_idx:end_idx]
+        total_pages = ceil(len(productos_validos) / per_page) if productos_validos else 1
 
-        # Guardar en caché
-        cache_data = {
-            'productos': productos_pagina,
-            'total_pages': total_pages
-        }
-        set_cached_data(cache_key, cache_data)
+        # Guardar en caché solo si hay productos válidos
+        if productos_validos:
+            cache_data = {
+                'productos': productos_pagina,
+                'total_pages': total_pages
+            }
+            set_cached_data(cache_key, cache_data)
 
-        return render_template('index.html',
-                             productos=productos_pagina,
-                             pagina=page,
-                             paginas=total_pages,
-                             busqueda=busqueda)
+        try:
+            return render_template('index.html',
+                                 productos=productos_pagina,
+                                 pagina=page,
+                                 paginas=total_pages,
+                                 busqueda=busqueda)
+        except Exception as template_error:
+            app.logger.error(f'Error al renderizar plantilla: {str(template_error)}')
+            return render_template('error.html', error="Error al mostrar la página"), 500
+
     except Exception as e:
         app.logger.error(f'Error en la página principal: {str(e)}')
         return render_template('error.html', error="Ha ocurrido un error inesperado"), 500
