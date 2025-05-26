@@ -480,9 +480,10 @@ def login_required(f):
 @app.route('/')
 def index():
     try:
-        # Verificar que la plantilla existe
-        if not os.path.exists('templates/index.html'):
-            app.logger.error('Plantilla index.html no encontrada')
+        # Verificar que la plantilla existe usando ruta absoluta
+        template_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates', 'index.html')
+        if not os.path.exists(template_path):
+            app.logger.error(f'Plantilla index.html no encontrada en: {template_path}')
             return render_template('error.html', error="Error de configuración del servidor"), 500
 
         page = request.args.get('page', 1, type=int)
@@ -525,8 +526,8 @@ def index():
                     producto['precio'] = 0
                     app.logger.warning(f"Precio inválido para producto {producto.get('id')}: {producto.get('precio')}")
 
-                # Validar imagen
-                imagen_path = os.path.join('static', producto.get('imagen', ''))
+                # Validar imagen usando ruta absoluta
+                imagen_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static', producto.get('imagen', ''))
                 if not os.path.exists(imagen_path):
                     app.logger.warning(f"Imagen no encontrada para producto {producto.get('id')}: {producto.get('imagen')}")
                     continue
