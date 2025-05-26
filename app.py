@@ -198,7 +198,7 @@ productos = [
         "id": 16,
         "nombre": "Pachá 22KG",
         "imagen": "img/Bred_Dog_Adulto_x20kg.jpeg",
-        "precio": 32000,
+        "precio": 35000,
         "categoria": "perros",
         "descripcion": "Alimento balanceado para perros"
     },
