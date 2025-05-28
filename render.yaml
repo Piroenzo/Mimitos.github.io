@@ -1,8 +1,0 @@
-static:
-  - name: mimitos
-    buildCommand: echo "No build required for static site"
-    staticPublishPath: .
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html 
