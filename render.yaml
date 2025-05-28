@@ -1,7 +1,5 @@
-services:
-  - type: static
-    name: mimitos
-    env: static
+static:
+  - name: mimitos
     buildCommand: echo "No build required for static site"
     staticPublishPath: .
     routes:
