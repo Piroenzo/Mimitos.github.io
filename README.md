@@ -1,34 +1,35 @@
-# Mimitos Web
+# Forrajería Mimitos - Sitio Web
 
-Sitio web para la tienda de mascotas Mimitos, desarrollado con Flask.
+Este es el sitio web oficial de Forrajería Mimitos, una tienda especializada en productos para mascotas ubicada en Luján, Buenos Aires.
 
 ## Características
 
-- Catálogo de productos
-- Sistema de autenticación de usuarios
-- Panel de administración
-- Gestión de productos y categorías
-- Sistema de notificaciones por email
+- Catálogo de productos con filtrado por categorías
+- Búsqueda de productos en tiempo real
+- Información de sucursales con mapas interactivos
+- Diseño responsive y moderno
+- Integración con WhatsApp para consultas
 
 ## Requisitos
 
 - Python 3.8 o superior
-- Flask 3.0.0
-- SQLAlchemy
-- Gunicorn (para producción)
+- pip (gestor de paquetes de Python)
 
 ## Instalación
 
 1. Clonar el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/mimitos_web.git
-cd mimitos_web
+git clone https://github.com/Piroenzo/Mimitos.github.io.git
+cd Mimitos.github.io
 ```
 
-2. Crear y activar el entorno virtual:
+2. Crear y activar un entorno virtual:
 ```bash
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+# En Windows:
+venv\Scripts\activate
+# En macOS/Linux:
+source venv/bin/activate
 ```
 
 3. Instalar dependencias:
@@ -36,45 +37,51 @@ source venv/bin/activate  # En Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Configurar variables de entorno:
-Crear un archivo `.env` con las siguientes variables:
-```
-FLASK_APP=app.py
-FLASK_ENV=development
-SECRET_KEY=tu_clave_secreta
-MAIL_SERVER=smtp.gmail.com
-MAIL_PORT=587
-MAIL_USE_TLS=True
-MAIL_USERNAME=tu_email@gmail.com
-MAIL_PASSWORD=tu_contraseña
+## Ejecución Local
+
+Para ejecutar el proyecto localmente:
+
+```bash
+python app.py
 ```
 
-5. Iniciar la aplicación:
-```bash
-flask run
-```
+El sitio estará disponible en `http://localhost:5000`
+
+## Despliegue en Render
+
+1. Crear una cuenta en [Render](https://render.com)
+2. Conectar el repositorio de GitHub
+3. Crear un nuevo Web Service
+4. Configurar:
+   - Build Command: `pip install -r requirements.txt`
+   - Start Command: `gunicorn app:app`
+   - Python Version: 3.8 o superior
 
 ## Estructura del Proyecto
 
 ```
-mimitos_web/
-├── app.py              # Aplicación principal
-├── requirements.txt    # Dependencias
-├── static/            # Archivos estáticos (CSS, JS, imágenes)
-├── templates/         # Plantillas HTML
-├── logs/             # Archivos de registro
-└── backups/          # Copias de seguridad
+Mimitos.github.io/
+├── static/          # Archivos estáticos (CSS, JS, imágenes)
+├── templates/       # Plantillas HTML
+├── app.py          # Aplicación principal
+├── requirements.txt # Dependencias del proyecto
+└── README.md       # Este archivo
 ```
 
-## Despliegue
+## Tecnologías Utilizadas
 
-El proyecto está configurado para ser desplegado en Render. Para desplegar:
+- Flask (Backend)
+- HTML5, CSS3, JavaScript (Frontend)
+- Google Maps API (Mapas interactivos)
+- Font Awesome (Iconos)
+- Google Fonts (Tipografía)
 
-1. Subir el código a GitHub
-2. Crear un nuevo servicio Web en Render
-3. Conectar con el repositorio de GitHub
-4. Configurar las variables de entorno en Render
+## Contacto
+
+Para soporte o consultas:
+- WhatsApp: [2323-534156](https://wa.me/5492323534156)
+- Instagram: [@mimitos.balanceados](https://instagram.com/mimitos.balanceados)
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT. 
+Todos los derechos reservados © 2024 Forrajería Mimitos 
